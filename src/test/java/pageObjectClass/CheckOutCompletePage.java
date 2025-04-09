@@ -21,38 +21,38 @@ public class CheckOutCompletePage extends BaseClass {
 	By Thanksmessage = By.className("complete-header");
 	By completetext = By.className("complete-text");
 	By BackHome = By.id("back-to-products");
-	
+
 	// Action Methods
 
-    // Get the title of the Complete page
-    public String getTitle() {
-        WebElement pageTitle = driver.findElement(title);
-        return pageTitle.getText();
-    }
+	// Get the title of the Complete page
+	public String getTitle() {
+		WebElement pageTitle = driver.findElement(title);
+		return pageTitle.getText();
+	}
 
-    // Check if the tick icon is displayed
-    public boolean isTickIconDisplayed() {
-        WebElement tickIcon = driver.findElement(TickIconBy);
-        return tickIcon.isDisplayed();
-    }
+	// Check if the tick icon is displayed
+	public boolean isTickIconDisplayed() {
+		WebElement tickIcon = driver.findElement(TickIconBy);
+		return tickIcon.isDisplayed();
+	}
 
-    // Get the Thanks message
-    public String getThanksMessage() {
-        WebElement thanksMessage = driver.findElement(Thanksmessage);
-        return thanksMessage.getText();
-    }
+	// Get the Thanks message
+	public String getThanksMessage() {
+		WebElement thanksMessage = driver.findElement(Thanksmessage);
+		return thanksMessage.getText();
+	}
 
-    // Get the completion text message
-    public String getCompleteText() {
-        WebElement completeText = driver.findElement(completetext);
-        return completeText.getText();
-    }
+	// Get the completion text message
+	public String getCompleteText() {
+		WebElement completeText = driver.findElement(completetext);
+		return completeText.getText();
+	}
 
-    // Click the Back to Products button
-    public boolean clickBackHome() {
-        WebElement backHomeButton = driver.findElement(BackHome);
-        backHomeButton.click();
+	// Click the Back to Products button
+	public boolean clickBackHome() {
+		WebElement backHomeButton = driver.findElement(BackHome);
+		backHomeButton.click();
 		return true;
-    }
-	
+	}
+
 }
