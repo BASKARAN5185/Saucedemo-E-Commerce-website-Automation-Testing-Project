@@ -1,25 +1,646 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="51" passed="41" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-08T21:47:27 IST" name="Default suite" finished-at="2025-04-08T21:47:33 IST" duration-ms="5802">
+  <suite started-at="2025-04-10T16:54:52 IST" name="Suite" finished-at="2025-04-10T16:56:32 IST" duration-ms="99701">
     <groups>
+      <group name="regression">
+        <method signature="LoginPageTest.LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" name="LogininVaildCrential" class="testBase.LoginPageTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LandingPageTest.Login()[pri:1, instance:testBase.LandingPageTest@78e4deb0]" name="Login" class="testBase.LandingPageTest"/>
+        <method signature="LoginPageTest.Login()[pri:2, instance:testBase.LoginPageTest@7526515b]" name="Login" class="testBase.LoginPageTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-04-08T21:47:27 IST" name="Default test" finished-at="2025-04-08T21:47:33 IST" duration-ms="5802">
+    <test started-at="2025-04-10T16:54:52 IST" name="Test" finished-at="2025-04-10T16:56:32 IST" duration-ms="99701">
+      <class name="testBase.CheckOutOverViewPageTest">
+        <test-method signature="VerifyTheItemTax()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:17 IST" name="VerifyTheItemTax" finished-at="2025-04-10T16:56:17 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheItemTax -->
+        <test-method signature="VerifyTheItemTotalInformation()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:17 IST" name="VerifyTheItemTotalInformation" finished-at="2025-04-10T16:56:17 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheItemTotalInformation -->
+        <test-method signature="VerifyThePaymentImfomation()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:17 IST" name="VerifyThePaymentImfomation" finished-at="2025-04-10T16:56:17 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyThePaymentImfomation -->
+        <test-method signature="VerifyTheShopingInformation()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:17 IST" name="VerifyTheShopingInformation" finished-at="2025-04-10T16:56:17 IST" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheShopingInformation -->
+        <test-method signature="VerifyTheTotalPrice()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:17 IST" name="VerifyTheTotalPrice" finished-at="2025-04-10T16:56:18 IST" duration-ms="551" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Total: $32.39] but found [Item total: $29.99]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Total: $32.39] but found [Item total: $29.99]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testBase.CheckOutOverViewPageTest.VerifyTheTotalPrice(CheckOutOverViewPageTest.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheTotalPrice -->
+        <test-method signature="verifyTheTiTleOfThePage()[pri:1, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:18 IST" name="verifyTheTiTleOfThePage" finished-at="2025-04-10T16:56:19 IST" duration-ms="840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheTiTleOfThePage -->
+        <test-method signature="VerifyTheFinishButtonClickable()[pri:0, instance:testBase.CheckOutOverViewPageTest@8f2ef19]" started-at="2025-04-10T16:56:19 IST" name="VerifyTheFinishButtonClickable" finished-at="2025-04-10T16:56:21 IST" depends-on-methods="testBase.CheckOutOverViewPageTest.verifyTheTiTleOfThePage" duration-ms="1807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheFinishButtonClickable -->
+      </class> <!-- testBase.CheckOutOverViewPageTest -->
+      <class name="testBase.CheckOutPageTest">
+        <test-method signature="enterTheFirstName()[pri:0, instance:testBase.CheckOutPageTest@4b741d6d]" started-at="2025-04-10T16:56:13 IST" name="enterTheFirstName" finished-at="2025-04-10T16:56:14 IST" duration-ms="1236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTheFirstName -->
+        <test-method signature="enterTheLastName()[pri:0, instance:testBase.CheckOutPageTest@4b741d6d]" started-at="2025-04-10T16:56:14 IST" name="enterTheLastName" finished-at="2025-04-10T16:56:15 IST" depends-on-methods="testBase.CheckOutPageTest.enterTheFirstName" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTheLastName -->
+        <test-method signature="enterTheZipCode()[pri:0, instance:testBase.CheckOutPageTest@4b741d6d]" started-at="2025-04-10T16:56:15 IST" name="enterTheZipCode" finished-at="2025-04-10T16:56:16 IST" depends-on-methods="testBase.CheckOutPageTest.enterTheLastName" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTheZipCode -->
+        <test-method signature="clicktheContinue()[pri:0, instance:testBase.CheckOutPageTest@4b741d6d]" started-at="2025-04-10T16:56:16 IST" name="clicktheContinue" finished-at="2025-04-10T16:56:16 IST" depends-on-methods="testBase.CheckOutPageTest.enterTheZipCode" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicktheContinue -->
+        <test-method signature="verifyTheTitleOfThePage()[pri:1, instance:testBase.CheckOutPageTest@4b741d6d]" started-at="2025-04-10T16:56:16 IST" name="verifyTheTitleOfThePage" finished-at="2025-04-10T16:56:16 IST" duration-ms="362" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Checkout: Your Information] but found [Checkout: Overview]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Checkout: Your Information] but found [Checkout: Overview]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testBase.CheckOutPageTest.verifyTheTitleOfThePage(CheckOutPageTest.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheTitleOfThePage -->
+      </class> <!-- testBase.CheckOutPageTest -->
+      <class name="testBase.LandingPageTest">
+        <test-method signature="verifyProductTitleVisibility()[pri:-1, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:34 IST" name="verifyProductTitleVisibility" finished-at="2025-04-10T16:55:35 IST" duration-ms="778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductTitleVisibility -->
+        <test-method signature="verifyLogout()[pri:0, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:35 IST" name="verifyLogout" finished-at="2025-04-10T16:55:37 IST" duration-ms="2044" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testBase.LandingPageTest.verifyLogout(LandingPageTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method signature="verifyMenuAbout()[pri:0, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:37 IST" name="verifyMenuAbout" finished-at="2025-04-10T16:55:52 IST" duration-ms="15148" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#react\-burger\-menu\-btn"}
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2403ee78d418a0cbbb7b7027c622587e, findElement {using=id, value=react-burger-menu-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\xmedia\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58666/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2403ee78d418a0cbbb7b7027c622587e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#react\-burger\-menu\-btn"}
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2403ee78d418a0cbbb7b7027c622587e, findElement {using=id, value=react-burger-menu-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\xmedia\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58666/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2403ee78d418a0cbbb7b7027c622587e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at pageObjectClass.LandingPage.clickTheMenuIcon(LandingPage.java:46)
+at testBase.LandingPageTest.verifyMenuAbout(LandingPageTest.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuAbout -->
+        <test-method signature="Login()[pri:1, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:53 IST" name="Login" finished-at="2025-04-10T16:55:58 IST" duration-ms="4707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="verifyHomePageLogo()[pri:2, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:58 IST" name="verifyHomePageLogo" finished-at="2025-04-10T16:55:58 IST" duration-ms="733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageLogo -->
+        <test-method signature="verifyMenuIconClick()[pri:3, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:58 IST" name="verifyMenuIconClick" finished-at="2025-04-10T16:55:59 IST" duration-ms="452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuIconClick -->
+        <test-method signature="verifyMenuClose()[pri:4, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:55:59 IST" name="verifyMenuClose" finished-at="2025-04-10T16:56:00 IST" duration-ms="832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuClose -->
+        <test-method signature="verifyMenuAllItemsClick()[pri:5, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:00 IST" name="verifyMenuAllItemsClick" finished-at="2025-04-10T16:56:01 IST" duration-ms="924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuAllItemsClick -->
+        <test-method signature="verifyAppStoreReset()[pri:6, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:01 IST" name="verifyAppStoreReset" finished-at="2025-04-10T16:56:01 IST" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAppStoreReset -->
+        <test-method signature="verifyProductSortingAZ()[pri:8, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:01 IST" name="verifyProductSortingAZ" finished-at="2025-04-10T16:56:02 IST" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductSortingAZ -->
+        <test-method signature="verifyProductSortingZA()[pri:9, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:02 IST" name="verifyProductSortingZA" finished-at="2025-04-10T16:56:03 IST" duration-ms="1129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductSortingZA -->
+        <test-method signature="verifyProductSortingHighToLow()[pri:10, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:03 IST" name="verifyProductSortingHighToLow" finished-at="2025-04-10T16:56:05 IST" duration-ms="1336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductSortingHighToLow -->
+        <test-method signature="verifyProductSortingLowToHigh()[pri:11, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:05 IST" name="verifyProductSortingLowToHigh" finished-at="2025-04-10T16:56:06 IST" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductSortingLowToHigh -->
+        <test-method signature="clickTheAddToCart()[pri:13, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:06 IST" name="clickTheAddToCart" finished-at="2025-04-10T16:56:08 IST" duration-ms="1668" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at org.testng.Assert.assertFalse(Assert.java:89)
+at testBase.LandingPageTest.clickTheAddToCart(LandingPageTest.java:117)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTheAddToCart -->
+        <test-method signature="clickTheRemoveAddToCart()[pri:14, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:08 IST" name="clickTheRemoveAddToCart" finished-at="2025-04-10T16:56:09 IST" duration-ms="1093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTheRemoveAddToCart -->
+        <test-method signature="addToCartBadgevisible()[pri:15, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:09 IST" name="addToCartBadgevisible" finished-at="2025-04-10T16:56:10 IST" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartBadgevisible -->
+        <test-method signature="verifyCartIconVisibility()[pri:0, instance:testBase.LandingPageTest@78e4deb0]" started-at="2025-04-10T16:56:10 IST" name="verifyCartIconVisibility" finished-at="2025-04-10T16:56:11 IST" depends-on-methods="testBase.LandingPageTest.addToCartBadgevisible" duration-ms="967" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2403ee78d418a0cbbb7b7027c622587e, isElementDisplayed {id=f.FA3B703F1EB47BDFE4ACA6D29F41EE29.d.9289337FFF019AF174825FE90A037568.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\xmedia\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58666/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2403ee78d418a0cbbb7b7027c622587e)] -> class name: shopping_cart_link]
+Session ID: 2403ee78d418a0cbbb7b7027c622587e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2403ee78d418a0cbbb7b7027c622587e, isElementDisplayed {id=f.FA3B703F1EB47BDFE4ACA6D29F41EE29.d.9289337FFF019AF174825FE90A037568.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\xmedia\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58666}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58666/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2403ee78d418a0cbbb7b7027c622587e)] -> class name: shopping_cart_link]
+Session ID: 2403ee78d418a0cbbb7b7027c622587e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+at pageObjectClass.LandingPage.addToCartIconIsVisiable(LandingPage.java:58)
+at testBase.LandingPageTest.verifyCartIconVisibility(LandingPageTest.java:108)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartIconVisibility -->
+      </class> <!-- testBase.LandingPageTest -->
+      <class name="testBase.CheckOutCompletePageTest">
+        <test-method signature="VerifyTheCompleteTextMessage()[pri:0, instance:testBase.CheckOutCompletePageTest@2cf3d63b]" started-at="2025-04-10T16:56:21 IST" name="VerifyTheCompleteTextMessage" finished-at="2025-04-10T16:56:21 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheCompleteTextMessage -->
+        <test-method signature="VerifyTheThanksMessage()[pri:0, instance:testBase.CheckOutCompletePageTest@2cf3d63b]" started-at="2025-04-10T16:56:21 IST" name="VerifyTheThanksMessage" finished-at="2025-04-10T16:56:23 IST" duration-ms="2184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheThanksMessage -->
+        <test-method signature="VerifyTheTickIconVisibele()[pri:0, instance:testBase.CheckOutCompletePageTest@2cf3d63b]" started-at="2025-04-10T16:56:23 IST" name="VerifyTheTickIconVisibele" finished-at="2025-04-10T16:56:24 IST" duration-ms="933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheTickIconVisibele -->
+        <test-method signature="verifyTheTiTleOfThePage()[pri:1, instance:testBase.CheckOutCompletePageTest@2cf3d63b]" started-at="2025-04-10T16:56:24 IST" name="verifyTheTiTleOfThePage" finished-at="2025-04-10T16:56:25 IST" duration-ms="1173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheTiTleOfThePage -->
+        <test-method signature="VerifyTheFinishButtonClickable()[pri:0, instance:testBase.CheckOutCompletePageTest@2cf3d63b]" started-at="2025-04-10T16:56:25 IST" name="VerifyTheFinishButtonClickable" finished-at="2025-04-10T16:56:26 IST" depends-on-methods="testBase.CheckOutCompletePageTest.verifyTheTiTleOfThePage" duration-ms="565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTheFinishButtonClickable -->
+      </class> <!-- testBase.CheckOutCompletePageTest -->
       <class name="testBase.CartPageTest">
-        <test-method is-config="true" signature="openTheBrowser()[pri:0, instance:testBase.CartPageTest@6c1a5b54]" started-at="2025-04-08T21:47:27 IST" name="openTheBrowser" finished-at="2025-04-08T21:47:32 IST" duration-ms="5229" status="PASS">
+        <test-method signature="verifyTheTitleOfThePage()[pri:1, instance:testBase.CartPageTest@7d0b7e3c]" started-at="2025-04-10T16:56:11 IST" name="verifyTheTitleOfThePage" finished-at="2025-04-10T16:56:12 IST" duration-ms="951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheTitleOfThePage -->
+        <test-method signature="clickTheCheckOutButton()[pri:0, instance:testBase.CartPageTest@7d0b7e3c]" started-at="2025-04-10T16:56:12 IST" name="clickTheCheckOutButton" finished-at="2025-04-10T16:56:13 IST" depends-on-methods="testBase.CartPageTest.verifyTheTitleOfThePage" duration-ms="387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTheCheckOutButton -->
+      </class> <!-- testBase.CartPageTest -->
+      <class name="testBase.LoginPageTest">
+        <test-method is-config="true" signature="openTheBrowser()[pri:0, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:54:53 IST" name="openTheBrowser" finished-at="2025-04-10T16:55:01 IST" duration-ms="7438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openTheBrowser -->
-        <test-method signature="verifyTheTilteOfThePage()[pri:0, instance:testBase.CartPageTest@6c1a5b54]" started-at="2025-04-08T21:47:32 IST" name="verifyTheTilteOfThePage" finished-at="2025-04-08T21:47:32 IST" duration-ms="31" status="PASS">
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:01 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:03 IST" duration-ms="1659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid_user@xyz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheTilteOfThePage -->
-        <test-method is-config="true" signature="teardowm()[pri:0, instance:testBase.CartPageTest@6c1a5b54]" started-at="2025-04-08T21:47:32 IST" name="teardowm" finished-at="2025-04-08T21:47:33 IST" duration-ms="362" status="PASS">
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:03 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:05 IST" duration-ms="1867" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user@example.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:05 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:08 IST" duration-ms="3707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user@company.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:08 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:19 IST" duration-ms="10727" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user@domain.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:19 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:22 IST" duration-ms="2924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user@service.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:22 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:25 IST" duration-ms="2617" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[error_user@platform.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:25 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:27 IST" duration-ms="2264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[visual_user@domain.co]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:27 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:29 IST" duration-ms="1638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:29 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:30 IST" duration-ms="1795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user@example.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="LogininVaildCrential(java.lang.String,java.lang.String)[pri:1, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:30 IST" name="LogininVaildCrential" data-provider="userInvalidData" finished-at="2025-04-10T16:55:32 IST" duration-ms="1292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogininVaildCrential -->
+        <test-method signature="Login()[pri:2, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:55:32 IST" name="Login" finished-at="2025-04-10T16:55:34 IST" duration-ms="2249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="teardowm()[pri:0, instance:testBase.LoginPageTest@7526515b]" started-at="2025-04-10T16:56:26 IST" name="teardowm" finished-at="2025-04-10T16:56:32 IST" duration-ms="5752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardowm -->
-      </class> <!-- testBase.CartPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testBase.LoginPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

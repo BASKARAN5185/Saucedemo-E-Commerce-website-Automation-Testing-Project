@@ -11,7 +11,7 @@ public class CheckOutPageTest extends BaseClass {
 	CheckOutPage OrderCheck = new CheckOutPage(driver);
 
 	// verify the title of the Page
-	@Test()
+	@Test(priority=1)
 	void verifyTheTitleOfThePage() {
 		Assert.assertEquals(OrderCheck.getCheckOutPageTitle(), "Checkout: Your Information");
 
@@ -28,7 +28,7 @@ public class CheckOutPageTest extends BaseClass {
 	}
 
 	// Enter the last name
-	@Test
+	@Test(dependsOnMethods = "enterTheFirstName")
 	void enterTheLastName() {
 
 		String lastname = OrderCheck.enterLastName("K");
@@ -38,7 +38,7 @@ public class CheckOutPageTest extends BaseClass {
 	}
 
 	// Enter the ZipCode
-	@Test
+	@Test(dependsOnMethods = "enterTheLastName")
 	void enterTheZipCode() {
 		String zipcode = OrderCheck.enterPostalCode("10001");
 
@@ -47,7 +47,7 @@ public class CheckOutPageTest extends BaseClass {
 	}
 
 	// Click the continue button
-	@Test
+	@Test(dependsOnMethods ="enterTheZipCode" )
 	void clicktheContinue() {
 
 		Assert.assertTrue(OrderCheck.clickContinue());

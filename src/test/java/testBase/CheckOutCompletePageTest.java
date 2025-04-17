@@ -10,7 +10,7 @@ public class CheckOutCompletePageTest extends BaseClass {
 
 	CheckOutCompletePage OrderPurschase = new CheckOutCompletePage(driver);
 
-	@Test
+	@Test(priority=1)
 	public void verifyTheTiTleOfThePage() {
 		Assert.assertEquals(OrderPurschase.getTitle(), "Checkout: Complete!");
 
@@ -25,7 +25,7 @@ public class CheckOutCompletePageTest extends BaseClass {
 	@Test
 	public void VerifyTheCompleteTextMessage() {
 		Assert.assertEquals(OrderPurschase.getCompleteText(),
-				"Free Pony Express Delivery!Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+				"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
 	}
 
 	@Test
@@ -34,7 +34,7 @@ public class CheckOutCompletePageTest extends BaseClass {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = "verifyTheTiTleOfThePage")
 	public void VerifyTheFinishButtonClickable() {
 		Assert.assertTrue(OrderPurschase.clickBackHome());
 

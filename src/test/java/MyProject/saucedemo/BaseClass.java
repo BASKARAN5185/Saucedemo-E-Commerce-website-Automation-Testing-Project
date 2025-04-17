@@ -1,10 +1,15 @@
 package MyProject.saucedemo;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -75,6 +80,29 @@ public class BaseClass {
 			System.out.println("The page Scolling is not working ");
 		}
 
+	}
+
+	public String captureScreen(String testName) throws IOException {
+		// Take the screenshot
+		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		// Define the directory where screenshots will be stored
+		String screenshotDirectory = "C:\\Users\\xmedia\\Desktop\\Automation Test Report\\Screenshots\\" + testName;
+
+		// Create a new directory if it does not exist
+		File directory = new File(screenshotDirectory);
+		if (!directory.exists()) {
+			directory.mkdirs();
+		}
+
+		// Define the file path for the screenshot
+		String filePath = screenshotDirectory + "\\screenshot.png";
+		File destination = new File(filePath);
+
+		// Copy the screenshot to the destination path
+		FileHandler.copy(screenshot, destination);
+
+		return destination.getAbsolutePath(); // Return the path to the screenshot
 	}
 
 }

@@ -23,9 +23,9 @@ public class LandingPage extends BaseClass {
 	By BurgerMenu = By.id("react-burger-menu-btn");
 	By MenuClose = By.xpath("//div[@class='bm-cross-button']//button[1]");
 	By AllItem = By.id("inventory_sidebar_link");
-	By About = By.id("about_sidebar_link");
+	By About = By.xpath("(//a[@class='bm-item menu-item'])[2]");
 	By ResetTheAppstore = By.id("reset_sidebar_link");
-	By Logout = By.id("logout_sidebar_link");
+	By Logout = By.xpath("(//a[@class='bm-item menu-item'])[3]");
 
 	// Landing Page Header Locators
 	By PageTitle = By.className("app_logo");
@@ -44,7 +44,8 @@ public class LandingPage extends BaseClass {
 	public boolean clickTheMenuIcon() {
 
 		WebElement MenuIcon = driver.findElement(BurgerMenu);
-		MenuIcon.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", MenuIcon);
 		return true;
 	}
 
@@ -52,7 +53,8 @@ public class LandingPage extends BaseClass {
 	public boolean addToCartIconIsVisiable() {
 
 		WebElement cart = driver.findElement(CartIcon);
-		cart.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", cart);
 		return cart.isDisplayed();
 	}
 
@@ -61,18 +63,17 @@ public class LandingPage extends BaseClass {
 
 		WebElement logout = driver.findElement(Logout);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", logout);
+		js.executeScript("arguments[0].click();", logout);
 		return true;
-		
+
 	}
 
 	// Menu Closed
 	public boolean clickTheMenuClose() {
 
-		
 		WebElement closeButton = driver.findElement(MenuClose);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", closeButton);
+		js.executeScript("arguments[0].click();", closeButton);
 		return true;
 
 	}
@@ -81,7 +82,8 @@ public class LandingPage extends BaseClass {
 	public boolean clickTheMenuAllItems() {
 
 		WebElement Allitems = driver.findElement(AllItem);
-		Allitems.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", Allitems);
 		return true;
 	}
 
@@ -89,7 +91,8 @@ public class LandingPage extends BaseClass {
 	public boolean clickTheMenuResetAppstore() {
 
 		WebElement Reset = driver.findElement(ResetTheAppstore);
-		Reset.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", Reset);
 		return true;
 	}
 
@@ -97,14 +100,15 @@ public class LandingPage extends BaseClass {
 	public boolean clickTheMenuAbout() {
 
 		WebElement MenuAbout = driver.findElement(About);
-		MenuAbout.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", MenuAbout);
 		return true;
 	}
 
 	// Landing page AppLogo
-	public boolean AppLogo() {
+	public String AppLogo() {
 		WebElement Title = driver.findElement(PageTitle);
-		return Title.isDisplayed();
+		return Title.getText();
 	}
 
 	// Landing page Badge
@@ -113,6 +117,7 @@ public class LandingPage extends BaseClass {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", Badge);
 		return Badge.isDisplayed();
+		
 	}
 
 	// Landing page Title

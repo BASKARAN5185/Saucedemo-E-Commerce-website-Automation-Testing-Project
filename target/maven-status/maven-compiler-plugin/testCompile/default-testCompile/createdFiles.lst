@@ -1,0 +1,15 @@
+pageObjectClass\LandingPage.class
+pageObjectClass\LoginPage.class
+testBase\CartPageTest.class
+pageObjectClass\CheckOutOverViewPage.class
+pageObjectClass\CheckOutPage.class
+pageObjectClass\CheckOutCompletePage.class
+testBase\CheckOutOverViewPageTest.class
+testBase\LandingPageTest.class
+utility\ExtentReportManager.class
+utility\TestDataProvider.class
+MyProject\saucedemo\BaseClass.class
+testBase\CheckOutPageTest.class
+testBase\CheckOutCompletePageTest.class
+testBase\LoginPageTest.class
+pageObjectClass\YourCartPage.class

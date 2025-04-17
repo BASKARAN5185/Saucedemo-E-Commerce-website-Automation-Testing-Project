@@ -1,6 +1,7 @@
 package pageObjectClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -51,7 +52,8 @@ public class CheckOutCompletePage extends BaseClass {
 	// Click the Back to Products button
 	public boolean clickBackHome() {
 		WebElement backHomeButton = driver.findElement(BackHome);
-		backHomeButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", backHomeButton);
 		return true;
 	}
 

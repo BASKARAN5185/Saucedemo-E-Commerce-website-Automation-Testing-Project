@@ -1,6 +1,7 @@
 package pageObjectClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -15,11 +16,11 @@ public class CheckOutOverViewPage extends BaseClass {
 
 	// Overview Page Locators
 	By title = By.className("title");
-	By PaymentInformation = By.className("(//div[@class='summary_value_label'])[1]");
-	By ShoppingInformation = By.className("(//div[@class='summary_value_label'])[2]");
-	By ItemTotal = By.className("summary_subtotal_label");
-	By Tax = By.className("summary_tax_label");
-	By totlal = By.className("summary_total_label");
+	By PaymentInformation = By.xpath("(//div[@class='summary_value_label'])[1]");
+	By ShoppingInformation = By.xpath("(//div[@class='summary_value_label'])[2]");
+	By ItemTotal = By.xpath("//div[text()='Item total: $']");
+	By Tax = By.xpath("//div[text()='Tax: $']");
+	By totlal = By.xpath("//div[text()='Item total: $']");
 	By cancel = By.id("cancel");
 	By finish = By.id("finish");
 
@@ -64,14 +65,16 @@ public class CheckOutOverViewPage extends BaseClass {
 	// Click the Cancel button
 	public boolean clickCancel() {
 		WebElement cancelButton = driver.findElement(cancel);
-		cancelButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", cancelButton);
 		return true;
 	}
 
 	// Click the Finish button
 	public boolean clickFinish() {
 		WebElement finishButton = driver.findElement(finish);
-		finishButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", finishButton);
 		return true;
 	}
 

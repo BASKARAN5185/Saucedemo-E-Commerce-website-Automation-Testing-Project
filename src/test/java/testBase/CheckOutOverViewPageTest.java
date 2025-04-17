@@ -10,7 +10,7 @@ public class CheckOutOverViewPageTest extends BaseClass {
 
 	CheckOutOverViewPage OrderOverview = new CheckOutOverViewPage(driver);
 
-	@Test
+	@Test(priority=1)
 	public void verifyTheTiTleOfThePage() {
 		Assert.assertEquals(OrderOverview.getTitle(), "Checkout: Overview");
 
@@ -46,7 +46,7 @@ public class CheckOutOverViewPageTest extends BaseClass {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = "verifyTheTiTleOfThePage")
 	public void VerifyTheFinishButtonClickable() {
 		Assert.assertTrue(OrderOverview.clickFinish());
 

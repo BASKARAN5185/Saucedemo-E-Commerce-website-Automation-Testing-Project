@@ -1,6 +1,7 @@
 package pageObjectClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -55,14 +56,16 @@ public class CheckOutPage extends BaseClass {
     // Click cancel button
     public boolean clickCancel() {
         WebElement cancelButton = driver.findElement(cancel);
-        cancelButton.click();
-        return true;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", cancelButton);
+		return true;
     }
 
     // Click continue button
     public boolean clickContinue() {
         WebElement continueButton = driver.findElement(Continue);
-        continueButton.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", continueButton);
 		return true;
     }
 

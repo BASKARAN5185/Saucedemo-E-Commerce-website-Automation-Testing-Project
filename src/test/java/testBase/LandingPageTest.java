@@ -22,7 +22,7 @@ public class LandingPageTest extends BaseClass {
 	@Test(priority = 2)
 	public void verifyHomePageLogo() {
 		// Verifying that the App logo is visible on the homepage
-		Assert.assertTrue(HomePage.AppLogo(), "App logo is not visible");
+		Assert.assertEquals(HomePage.AppLogo(), "Swag Labs");
 	}
 
 	@Test(priority = 3)
@@ -72,7 +72,7 @@ public class LandingPageTest extends BaseClass {
 		Assert.assertTrue(HomePage.clickTheMenuClose(), "Menu close failed");
 	}
 
-	@Test()
+	@Test(priority=-1)
 	public void verifyProductTitleVisibility() {
 		// Verifying that the product title is visible
 		Assert.assertTrue(HomePage.ProductTitle(), "Product title not visible");

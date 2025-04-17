@@ -1,0 +1,10 @@
+# Ignore all HTML files in stats
+*.html linguist-generated=true
+
+# Optionally ignore other front-end files
+*.css linguist-generated=true
+#*.js linguist-generated=true
+
+# If you have a whole frontend folder (example: web or webapp)
+web/** linguist-vendored=true
+webapp/** linguist-vendored=true
