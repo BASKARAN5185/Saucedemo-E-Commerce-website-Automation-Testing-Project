@@ -1,140 +1,155 @@
-SauceDemo E-Commerce Website Automation Test Project
-Overview
-The SauceDemo E-Commerce Website Automation Test Project is an automation testing framework designed to validate key functionalities of the SauceDemo e-commerce website. SauceDemo is a mock online store used for demonstration purposes, and the primary goal of this project is to automate the verification of core workflows like login, product selection, adding to the cart, and completing the checkout process.
+---
 
-This project utilizes Selenium WebDriver for browser automation and TestNG for managing test cases, generating reports, and running the tests. The test suite covers various scenarios, including valid and invalid user actions, edge cases, and error handling.
+# SauceDemo E-Commerce Website Automation Test Project
 
-Features
-Key Functionalities Automated:
-Login: Verifies login with valid, invalid, and blank credentials.
+This is a comprehensive **automation testing framework** for the [SauceDemo](https://www.saucedemo.com/) e-commerce demo site. Built using **Selenium WebDriver** and **TestNG**, it automates critical workflows such as **login**, **product browsing**, **cart management**, and **checkout** to validate application behavior and error handling.
 
-Product Browsing: Ensures that the user can view the product catalog.
+---
 
-Add to Cart: Tests adding products to the shopping cart and verifying the cart contents.
+## 📌 Project Overview
 
-Checkout: Verifies successful order completion and confirmation.
+This project is ideal for QA automation practice. It automates real-user flows on a mock e-commerce site, including:
 
-Error Handling: Handles incorrect login credentials and empty fields.
+- 🔐 **Login tests** (valid, invalid, and empty credentials)
+- 🛒 **Product browsing** and cart operations
+- 💳 **Checkout process** and confirmation validation
+- ⚠️ **Error handling** for edge cases
+- 👥 **Role-based testing** for users like `standard_user`, `locked_out_user`
 
-User Roles: Supports testing across various predefined users (standard_user, locked_out_user, etc.).
+---
 
-Test Scenarios:
-Valid and invalid login attempts
+## ✨ Key Features
 
-Adding products to the cart and proceeding to checkout
+| Feature               | Description                                                   |
+|-----------------------|---------------------------------------------------------------|
+| ✅ Login Verification  | Validates login with multiple credential types                |
+| 🛍️ Cart & Checkout     | Automates product add-to-cart, cart view, and checkout flow  |
+| ⚠ Error Scenarios     | Validates input field checks, error messages, and edge cases  |
+| 👤 Role-Based Testing  | Executes flows with different SauceDemo user profiles         |
+| 🌐 Cross-Browser Ready | Compatible with Chrome and Firefox drivers                    |
+| 📊 Reporting           | Integrated ExtentReports for test result visualization        |
 
-Handling of empty input fields and error messages
+---
 
-Testing across different user roles
+## 🛠️ Technologies Used
 
-Cross-browser compatibility (Chrome, Firefox)
+| Technology            | Purpose                              |
+|------------------------|---------------------------------------|
+| **Java**               | Scripting language                    |
+| **Selenium WebDriver** | Browser automation engine             |
+| **TestNG**             | Test case management & reporting      |
+| **Maven**              | Build & dependency manager            |
+| **ExtentReports**      | Rich HTML-based test reports          |
+| **WebDrivers**         | ChromeDriver / GeckoDriver support    |
 
-Technologies Used
-Selenium WebDriver: For automating browser interactions and simulating user actions.
+---
 
-TestNG: For running and organizing tests, and generating detailed reports.
+## 📁 Project Structure
 
-Maven: For dependency management and project builds.
+```
+SauceDemo-Automation/
+│
+├── src/
+│   ├── main/java/MyProject/saucedemo/
+│   │   └── App.java
+│   │
+│   └── test/java/MyProject/saucedemo/
+│       ├── BaseClass.java
+│       ├── pageObjectClass/
+│       │   ├── LoginPage.java
+│       │   ├── LandingPage.java
+│       │   ├── YourCartPage.java
+│       │   ├── CheckOutPage.java
+│       │   ├── CheckOutOverViewPage.java
+│       │   └── CheckOutCompletePage.java
+│       ├── testBase/
+│       │   ├── LoginPageTest.java
+│       │   ├── LandingPageTest.java
+│       │   ├── CartPageTest.java
+│       │   ├── CheckOutPageTest.java
+│       │   ├── CheckOutOverViewPageTest.java
+│       │   └── CheckOutCompletePageTest.java
+│       └── utility/
+│           ├── ExtentReportManager.java
+│           ├── EnhanceExtentReportManager.java
+│           └── TestDataProvider.java
+│
+├── End to End Testing.xml       # TestNG suite file
+├── pom.xml                      # Maven configuration
+├── test-output/                 # Test reports
+└── README.md                    # Project documentation
+```
 
-Java: For writing the automation test scripts.
+---
 
-ChromeDriver / GeckoDriver: For running tests on Chrome and Firefox browsers.
+## 🧰 Setup Instructions
 
-Project Setup
-Follow these steps to set up and run the automation tests:
+### Prerequisites
 
-1. Clone the Repository
-Clone this repository to your local machine using Git:
+- Java 8 or higher  
+- Maven  
+- ChromeDriver / GeckoDriver  
+- Git
 
-bash
-Copy
+---
+
+### 🔧 Installation & Configuration
+
+1️⃣ **Clone the Repository**
+
+```bash
 git clone https://github.com/your-username/saucedemo-automation.git
-
-2. Install Required Dependencies
-Ensure you have Maven and Java installed on your machine. You can verify this by running the following commands:
-
-bash
-Copy
-mvn -version
-java -version
-Then, navigate to the project directory and install the required dependencies:
-
-bash
-Copy
 cd saucedemo-automation
+```
+
+2️⃣ **Install Dependencies**
+
+```bash
 mvn install
-This will download the necessary libraries such as Selenium WebDriver and TestNG.
+```
 
-3. Set Up WebDriver
-Ensure that you have the appropriate browser drivers installed for the browsers you want to test (e.g., ChromeDriver for Chrome, GeckoDriver for Firefox). Download the correct version of these drivers and provide their path in your WebDriver setup class.
+3️⃣ **Set WebDriver Path in `BaseClass.java`**
 
-java
-Copy
+```java
 System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
+```
 
-4. Running the Tests
-To run the tests, execute the following command:
+---
 
-bash
-Copy
+## ▶️ Running Tests
+
+Use Maven to run the test suite:
+
+```bash
 mvn test
-This will trigger the TestNG tests and run them in the specified browser(s) as defined in your testng.xml configuration.
+```
 
-5. View Test Reports
-After executing the tests, the results will be available in the target/test-classes directory, where you can find the TestNG HTML report for detailed information about the test execution.
+- Uses `testng.xml` or `End to End Testing.xml` for suite configuration.
+- Automatically launches tests in configured browser(s).
 
-Project Structure
-bash
-Copy
-/SauceDemo-Automation
-├── /src
-│   ├── /test
-│   │   ├── /java
-│   │   │   ├── /tests           # Automation test scripts
-│   │   │   ├── /utils           # Utility classes (WebDriver setup, etc.)
-│   │   │   └── /data            # Test data provider classes
-│   ├── /resources
-│   │   └── /testng.xml          # TestNG configuration file
-├── /lib                          # External libraries
-├── /target                       # Output directory for compiled classes and test reports
-├── pom.xml                       # Maven project configuration
-└── README.md                     # Project description
-/src/test/java: Contains test scripts and utility classes.
+---
 
-/src/resources: Stores the TestNG configuration file (testng.xml).
+## 📊 Reports & Results
 
-pom.xml: Maven configuration file for managing dependencies.
+- 🧾 **TestNG Reports**: Located under `target/surefire-reports/`
+- 🌐 **ExtentReports (HTML)**: Generated in `test-output/` or a configured path
 
-README.md: Project description (this file).
+These reports include pass/fail summaries, screenshots (if enabled), and step-by-step logging.
 
-Contributing
-If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request. Contributions are welcome to improve test coverage, fix bugs, or add new features!
+---
 
-License
-This project is licensed under the MIT License.
+## 📬 Contributions
 
-Additional Information:
-Running Tests in Parallel (Optional)
-You can modify the testng.xml file to run tests in parallel on different browsers or machines, enabling cross-browser testing. To set up parallel execution, you can use:
+Feel free to fork the repository, make improvements or bug fixes, and submit a pull request.  
+Any enhancements to structure, coverage, or usability are welcome!
 
-xml
-Copy
-<suite name="SauceDemoAutomation" parallel="tests" thread-count="2">
-  <test name="LoginTests">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="tests.LoginTest"/>
-    </classes>
-  </test>
-  <test name="CheckoutTests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="tests.CheckoutTest"/>
-    </classes>
-  </test>
-</suite>
-Continuous Integration
-This project can be integrated with Jenkins or other CI tools to automate the execution of tests whenever a change is made in the codebase. Set up your CI pipeline to pull the latest code, run the tests, and generate reports.
+---
 
-Conclusion
-This SauceDemo E-Commerce Website Automation Test Project provides a reliable and efficient way to test the functionality of the SauceDemo platform using Selenium WebDriver and TestNG. With automated tests, you can ensure that key user workflows such as login, product selection, and checkout are working as expected, saving time and effort in manual testing.
+## 🧠 Notes
+
+- CI integration (e.g., Jenkins, GitHub Actions) is **not yet configured**.
+- No license is applied; the project is intended for **learning and demonstration** only.
+- SauceDemo is a public mock site by [Sauce Labs](https://saucelabs.com/) — not affiliated.
+
+---
