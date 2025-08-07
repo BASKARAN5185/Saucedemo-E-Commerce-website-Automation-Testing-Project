@@ -9,17 +9,21 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 public class BaseClass {
 
 	public static RemoteWebDriver driver;
 
 	@BeforeTest
-	public void openTheBrowser() {
+	@Parameters("browser")
+	public void openTheBrowser(String browser) {
 		// Create ChromeOptions object to configure browser settings
 		ChromeOptions options = new ChromeOptions();
 
@@ -35,7 +39,19 @@ public class BaseClass {
 		options.addArguments(
 				"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"); // Set
 
-		driver = new ChromeDriver(options);
+		 switch (browser.toLowerCase()) {
+         case "chrome":
+             driver = new ChromeDriver(options);
+             break;
+         case "firefox":
+             driver = new FirefoxDriver();
+             break;
+         case "edge":
+             driver = new EdgeDriver();
+             break;
+         default:
+             throw new IllegalArgumentException("Invalid browser: " + browser);
+     }
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	}

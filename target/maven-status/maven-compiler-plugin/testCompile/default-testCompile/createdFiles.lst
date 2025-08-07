@@ -12,4 +12,5 @@ MyProject\saucedemo\BaseClass.class
 testBase\CheckOutPageTest.class
 testBase\CheckOutCompletePageTest.class
 testBase\LoginPageTest.class
+utility\EnhanceExtentReportManager.class
 pageObjectClass\YourCartPage.class

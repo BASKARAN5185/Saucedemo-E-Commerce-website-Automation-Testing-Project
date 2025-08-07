@@ -1,36 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="utility.EnhanceExtentReportManager"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="testBase.LandingPageTest">
+        <methods>
+          <include name="verifyCartIconVisibility"/>
+          <include name="addToCartBadgevisible"/>
+          <include name="verifyProductSortingHighToLow"/>
+          <include name="Login"/>
+          <include name="teardowm"/>
+          <include name="verifyHomePageLogo"/>
+          <include name="verifyMenuAbout"/>
+          <include name="verifyProductTitleVisibility"/>
+          <include name="clickTheRemoveAddToCart"/>
+          <include name="verifyProductSortingLowToHigh"/>
+          <include name="verifyProductSortingAZ"/>
+          <include name="verifyLogout"/>
+          <include name="clickTheAddToCart"/>
+          <include name="verifyMenuAllItemsClick"/>
+          <include name="verifyProductSortingZA"/>
+          <include name="verifyAppStoreReset"/>
+          <include name="verifyMenuClose"/>
+          <include name="verifyMenuIconClick"/>
+          <include name="openTheBrowser"/>
+        </methods>
+      </class> <!-- testBase.LandingPageTest -->
+      <class name="testBase.LoginPageTest">
+        <methods>
+          <include name="LogininVaildCrential" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="Login"/>
+          <include name="openTheBrowser"/>
+          <include name="teardowm"/>
+        </methods>
+      </class> <!-- testBase.LoginPageTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="1" parallel="tests" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testBase.CheckOutOverViewPageTest">
+        <methods>
+          <include name="VerifyTheItemTotalInformation"/>
+          <include name="VerifyTheShopingInformation"/>
+          <include name="VerifyTheTotalPrice"/>
+          <include name="VerifyTheFinishButtonClickable"/>
+          <include name="VerifyTheItemTax"/>
+          <include name="openTheBrowser"/>
+          <include name="verifyTheTiTleOfThePage"/>
+          <include name="teardowm"/>
+          <include name="VerifyThePaymentImfomation"/>
+        </methods>
+      </class> <!-- testBase.CheckOutOverViewPageTest -->
+      <class name="testBase.CheckOutCompletePageTest">
+        <methods>
+          <include name="VerifyTheTickIconVisibele"/>
+          <include name="VerifyTheThanksMessage"/>
+          <include name="openTheBrowser"/>
+          <include name="verifyTheTiTleOfThePage"/>
+          <include name="VerifyTheCompleteTextMessage"/>
+          <include name="teardowm"/>
+          <include name="VerifyTheFinishButtonClickable"/>
+        </methods>
+      </class> <!-- testBase.CheckOutCompletePageTest -->
+      <class name="testBase.LandingPageTest">
+        <methods>
+          <include name="verifyCartIconVisibility"/>
+          <include name="addToCartBadgevisible"/>
+          <include name="Login"/>
+          <include name="verifyProductSortingHighToLow"/>
+          <include name="teardowm"/>
+          <include name="verifyHomePageLogo"/>
+          <include name="verifyMenuAbout"/>
+          <include name="clickTheRemoveAddToCart"/>
+          <include name="verifyProductTitleVisibility"/>
+          <include name="verifyProductSortingAZ"/>
+          <include name="verifyLogout"/>
+          <include name="verifyProductSortingLowToHigh"/>
+          <include name="verifyMenuAllItemsClick"/>
+          <include name="clickTheAddToCart"/>
+          <include name="verifyProductSortingZA"/>
+          <include name="verifyAppStoreReset"/>
+          <include name="verifyMenuClose"/>
+          <include name="verifyMenuIconClick"/>
+          <include name="openTheBrowser"/>
+        </methods>
+      </class> <!-- testBase.LandingPageTest -->
       <class name="testBase.CheckOutPageTest">
         <methods>
           <include name="verifyTheTitleOfThePage"/>
+          <include name="clicktheContinue"/>
+          <include name="enterTheFirstName"/>
+          <include name="enterTheLastName"/>
           <include name="openTheBrowser"/>
           <include name="teardowm"/>
+          <include name="enterTheZipCode"/>
         </methods>
       </class> <!-- testBase.CheckOutPageTest -->
-      <class name="testBase.LandingPageTest">
+      <class name="testBase.LoginPageTest">
         <methods>
-          <include name="clickTheAddToCart"/>
-          <include name="verifyCartIconVisibility"/>
-          <include name="addToCartBadgevisible"/>
+          <include name="LogininVaildCrential" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="Login"/>
           <include name="openTheBrowser"/>
           <include name="teardowm"/>
-          <include name="verifyMenuAbout"/>
-          <include name="verifyLogout"/>
         </methods>
-      </class> <!-- testBase.LandingPageTest -->
+      </class> <!-- testBase.LoginPageTest -->
+      <class name="testBase.CartPageTest">
+        <methods>
+          <include name="verifyTheTitleOfThePage"/>
+          <include name="clickTheCheckOutButton"/>
+          <include name="openTheBrowser"/>
+          <include name="teardowm"/>
+        </methods>
+      </class> <!-- testBase.CartPageTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="1" parallel="tests" name="EdgeTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
       <class name="testBase.CheckOutOverViewPageTest">
         <methods>
+          <include name="VerifyTheItemTotalInformation"/>
+          <include name="VerifyTheShopingInformation"/>
           <include name="VerifyTheTotalPrice"/>
+          <include name="VerifyTheFinishButtonClickable"/>
+          <include name="VerifyTheItemTax"/>
+          <include name="openTheBrowser"/>
+          <include name="verifyTheTiTleOfThePage"/>
+          <include name="teardowm"/>
+          <include name="VerifyThePaymentImfomation"/>
+        </methods>
+      </class> <!-- testBase.CheckOutOverViewPageTest -->
+      <class name="testBase.CheckOutCompletePageTest">
+        <methods>
+          <include name="VerifyTheTickIconVisibele"/>
+          <include name="VerifyTheThanksMessage"/>
+          <include name="openTheBrowser"/>
+          <include name="verifyTheTiTleOfThePage"/>
+          <include name="teardowm"/>
+          <include name="VerifyTheCompleteTextMessage"/>
+          <include name="VerifyTheFinishButtonClickable"/>
+        </methods>
+      </class> <!-- testBase.CheckOutCompletePageTest -->
+      <class name="testBase.LandingPageTest">
+        <methods>
+          <include name="verifyCartIconVisibility"/>
+          <include name="addToCartBadgevisible"/>
+          <include name="Login"/>
+          <include name="verifyProductSortingHighToLow"/>
+          <include name="teardowm"/>
+          <include name="verifyHomePageLogo"/>
+          <include name="verifyMenuAbout"/>
+          <include name="clickTheRemoveAddToCart"/>
+          <include name="verifyProductTitleVisibility"/>
+          <include name="verifyProductSortingAZ"/>
+          <include name="verifyProductSortingLowToHigh"/>
+          <include name="verifyLogout"/>
+          <include name="verifyMenuAllItemsClick"/>
+          <include name="clickTheAddToCart"/>
+          <include name="verifyProductSortingZA"/>
+          <include name="verifyAppStoreReset"/>
+          <include name="verifyMenuClose"/>
+          <include name="openTheBrowser"/>
+          <include name="verifyMenuIconClick"/>
+        </methods>
+      </class> <!-- testBase.LandingPageTest -->
+      <class name="testBase.CheckOutPageTest">
+        <methods>
+          <include name="verifyTheTitleOfThePage"/>
+          <include name="enterTheFirstName"/>
+          <include name="clicktheContinue"/>
+          <include name="enterTheLastName"/>
+          <include name="openTheBrowser"/>
+          <include name="teardowm"/>
+          <include name="enterTheZipCode"/>
+        </methods>
+      </class> <!-- testBase.CheckOutPageTest -->
+      <class name="testBase.LoginPageTest">
+        <methods>
+          <include name="LogininVaildCrential" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="Login"/>
           <include name="openTheBrowser"/>
           <include name="teardowm"/>
         </methods>
-      </class> <!-- testBase.CheckOutOverViewPageTest -->
+      </class> <!-- testBase.LoginPageTest -->
+      <class name="testBase.CartPageTest">
+        <methods>
+          <include name="verifyTheTitleOfThePage"/>
+          <include name="clickTheCheckOutButton"/>
+          <include name="openTheBrowser"/>
+          <include name="teardowm"/>
+        </methods>
+      </class> <!-- testBase.CartPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

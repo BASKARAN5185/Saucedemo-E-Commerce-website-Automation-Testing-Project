@@ -10,7 +10,7 @@ public class CheckOutCompletePageTest extends BaseClass {
 
 	CheckOutCompletePage OrderPurschase = new CheckOutCompletePage(driver);
 
-	@Test(priority=1)
+	@Test(priority = 1)
 	public void verifyTheTiTleOfThePage() {
 		Assert.assertEquals(OrderPurschase.getTitle(), "Checkout: Complete!");
 
